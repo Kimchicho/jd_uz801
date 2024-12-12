@@ -48,7 +48,7 @@ func Notify() {
 			if len(code) == 0 {
 				subject = "短信转发"
 			} else {
-				subject = code
+				subject = fmt.Sprintf("验证码 %s", code) // 设置主题为“验证码”加空格加验证码的值
 			}
 
 			sendMailMessage(subject, content)
